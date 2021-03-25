@@ -1,3 +1,3 @@
 require_relative './lib/weather_request'
 
-WeatherRequest.new.do_something
+WeatherRequest.new.get_forecast

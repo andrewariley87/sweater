@@ -1,0 +1,17 @@
+GEM
+  remote: https://rubygems.org/
+  specs:
+    dotenv (2.7.6)
+    minitest (5.14.4)
+    mocha (1.12.0)
+
+PLATFORMS
+  ruby
+
+DEPENDENCIES
+  dotenv
+  minitest
+  mocha
+
+BUNDLED WITH
+   1.17.3

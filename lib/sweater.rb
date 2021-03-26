@@ -1,19 +1,18 @@
-require_relative './weather_request'
 require 'json'
 
 class Sweater
-  attr_reader :max_temp, :min_temp, :data, :filepath, :items
+  attr_reader :max_temp, :min_temp, :data, :file, :items
 
-  def initialize(forecast, filepath)
+  def initialize(forecast, file)
     @max_temp = forecast['temp_max']
     @min_temp = forecast['temp_min']
-    @filepath = filepath
+    @file     = file
     @data     = recommendation_data['available_recommendations']
     @items    = []
   end
 
   def recommendation_data
-    JSON.parse(File.read("./config/#{filepath}"))
+    JSON.parse(File.read("./config/#{file}"))
   rescue
     raise 'File must be valid json'
   end
